@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarittawat - Education</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <iframe id="bg-video" src="https://www.youtube.com/embed/rTtMtX2B9ps?autoplay=1&mute=0&loop=1&playlist=rTtMtX2B9ps&controls=0&modestbranding=1" frameborder="0" allow="autoplay"></iframe>
+    <div class="bg-overlay"></div>
+    <div class="fire-border"></div>
+
+    <header>
+        <nav>
+            <div class="logo">SARITTAWAT<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="profile.html">ประวัติส่วนตัว</a></li>
+                <li><a href="education.html" class="active">การศึกษา</a></li>
+                <li><a href="hobby.html">งานอดิเรก</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="education-page">
+        <section class="education-section">
+            <h2 class="section-title">ประวัติการศึกษา</h2>
+            
+            <div class="timeline">
+                <div class="timeline-item card interactive-card">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>ประถมศึกษา</h3>
+                        <h4 class="school-name">โรงเรียนศรีจอมทอง</h4>
+                        <p>สำเร็จการศึกษาระดับประถมศึกษา สร้างพื้นฐานที่แข็งแกร่งสำหรับการเรียนรู้</p>
+                    </div>
+                </div>
+                <div class="timeline-item card interactive-card">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>มัธยมศึกษาตอนต้น (ปัจจุบัน)</h3>
+                        <h4 class="school-name">โรงเรียนจอมทอง</h4>
+                        <p><strong>ระดับชั้น:</strong> ม.3/2</p>
+                        <p><strong>GPAX (เกรดเฉลี่ย):</strong> 4.00</p>
+                    </div>
+                </div>
+                <div class="timeline-item card interactive-card">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>เป้าหมายในอนาคต (ม.ปลาย)</h3>
+                        <h4 class="school-name">สายการเรียน วิทย์-คณิต</h4>
+                        <p>เตรียมความพร้อมสู่การเป็นนักพัฒนาและสายเทคโนโลยีในอนาคต</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight-subjects card interactive-card">
+                <h3>วิชาที่ชอบ</h3>
+                <div class="subject-tags">
+                    <span>คณิตศาสตร์</span>
+                    <span>ภาษาอังกฤษ</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sarittawat Yotdechakit (M.3/2)</p>
+    </footer>
+
+    <script>
+        document.addEventListener('click', function(e) {
+            let exp = document.createElement('div');
+            exp.className = 'magma-explosion';
+            exp.style.left = e.pageX + 'px'; exp.style.top = e.pageY + 'px';
+            document.body.appendChild(exp);
+            setTimeout(() => exp.remove(), 500);
+        });
+        document.querySelectorAll('.interactive-card').forEach(card => {
+            card.addEventListener('click', function() {
+                let phoenix = document.createElement('img');
+                phoenix.src = 'https://i.gifer.com/origin/c6/c6f78df39be0329b1d03370e59a67451_w200.gif'; 
+                phoenix.className = 'phoenix-fly';
+                document.body.appendChild(phoenix);
+                setTimeout(() => phoenix.remove(), 2500);
+            });
+        });
+    </script>
+</body>
+</html>
