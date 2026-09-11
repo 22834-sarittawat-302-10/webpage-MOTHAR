@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarittawat - Hobbies</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <iframe id="bg-video" src="https://www.youtube.com/embed/rTtMtX2B9ps?autoplay=1&mute=0&loop=1&playlist=rTtMtX2B9ps&controls=0&modestbranding=1" frameborder="0" allow="autoplay"></iframe>
+    <div class="bg-overlay"></div>
+    <div class="fire-border"></div>
+
+    <header>
+        <nav>
+            <div class="logo">SARITTAWAT<span>.</span></div>
+            <ul class="nav-links">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="profile.html">ประวัติส่วนตัว</a></li>
+                <li><a href="education.html">การศึกษา</a></li>
+                <li><a href="hobby.html" class="active">งานอดิเรก</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hobby-page">
+        <section class="hobby-section">
+            <h2 class="section-title">งานอดิเรก & ความสนใจ</h2>
+            <div class="hobby-grid">
+                <div class="hobby-card card interactive-card">
+                    <div class="hobby-icon">🎮</div>
+                    <h3>เล่นเกม</h3>
+                    <p>ROBLOX</p>
+                </div>
+                <div class="hobby-card card interactive-card">
+                    <div class="hobby-icon">🎵</div>
+                    <h3>ฟังเพลง</h3>
+                    <p>Marry on a cross</p>
+                </div>
+                <div class="hobby-card card interactive-card">
+                    <div class="hobby-icon">💻</div>
+                    <h3>เทคโนโลยี / เขียนโค้ด</h3>
+                    <p>GitHub</p>
+                </div>
+                <div class="hobby-card card interactive-card">
+                    <div class="hobby-icon">⚽</div>
+                    <h3>เล่นกีฬา</h3>
+                    <p>ฟุตบอล</p>
+                </div>
+                <div class="hobby-card card interactive-card">
+                    <div class="hobby-icon">📷</div>
+                    <h3>ถ่ายภาพ</h3>
+                    <p>ชอบถ่ายภาพบรรยากาศธรรมชาติในเชียงใหม่</p>
+                </div>
+                <div class="hobby-card card interactive-card">
+                    <div class="hobby-icon">📚</div>
+                    <h3>อ่านหนังสือ</h3>
+                    <p>อ่านหนังสือเกี่ยวกับการพัฒนาตนเองและเทคโนโลยี</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sarittawat Yotdechakit (M.3/2)</p>
+    </footer>
+
+    <script>
+        document.addEventListener('click', function(e) {
+            let exp = document.createElement('div');
+            exp.className = 'magma-explosion';
+            exp.style.left = e.pageX + 'px'; exp.style.top = e.pageY + 'px';
+            document.body.appendChild(exp);
+            setTimeout(() => exp.remove(), 500);
+        });
+        document.querySelectorAll('.interactive-card').forEach(card => {
+            card.addEventListener('click', function() {
+                let phoenix = document.createElement('img');
+                phoenix.src = 'https://i.gifer.com/origin/c6/c6f78df39be0329b1d03370e59a67451_w200.gif'; 
+                phoenix.className = 'phoenix-fly';
+                document.body.appendChild(phoenix);
+                setTimeout(() => phoenix.remove(), 2500);
+            });
+        });
+    </script>
+</body>
+</html>
